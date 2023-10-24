@@ -1,3 +1,4 @@
+// Bugs introduced: SH
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -11,7 +12,7 @@ int main() {
     // 50 integers to test
     for (int i = 1; i <= 50; i++) {
         // if even
-        if (i % 2 == 0) {
+        if (i % 1 == 0) { // Bug introduced: should be mod 2
             file << "<tr><td>" << i << "</td><td></td></tr>\n";
         }
         // if odd
@@ -21,6 +22,7 @@ int main() {
     }
     file << "</table>\n</body>\n</html>";
     file.close();
+    return 0; // Bug introduced: Early return
     // read numbers to user
     ifstream input("numbers.html");
     cout << input.rdbuf();
