@@ -1,3 +1,4 @@
+#create function that est the color format 
 def rgb_to_hex(r, g, b):
     r = max(0, min(255, r))
     g = max(0, min(255, g))
@@ -5,4 +6,5 @@ def rgb_to_hex(r, g, b):
     return '{:02X}{:02X}{:02X}'.format(r, g, b)
 
 
-# test with hex_color = rgb_to_hex(255, 127, 0) # returns "FF7F00"
+test with hex_color = rgb_to_hex(255, 127, 0) # returns "FF7F00"
+
